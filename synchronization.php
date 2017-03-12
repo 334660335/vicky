@@ -25,7 +25,7 @@ class Synchronization
      */
     private function isFromGithub($payload, $signature)
     {
-        return 'sha1=' . hash_hmac('sha1', $payload, env('GITHUB_DEPLOY_TOKEN'), false) === $signature;
+        return 'sha1=' . hash_hmac('sha1', $payload, 'wangdachui', false) === $signature;
     }
 }
 
