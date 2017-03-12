@@ -7,7 +7,8 @@ class Synchronization
     public function deploy()
     {
         $commands = ['cd /var/www/laravel-ubuntu', 'git pull'];
-        $signature = $request->header('X-Hub-Signature'); // $headers = getallheaders(); $headers['X-Hub-Signature']
+		$headers = getallheaders();
+        $signature = $headers['X-Hub-Signature']; // $headers = getallheaders(); $headers['X-Hub-Signature']
         $payload = file_get_contents('php://input');
         if ($this->isFromGithub($payload, $signature)) {
             foreach ($commands as $command) {
