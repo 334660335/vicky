@@ -7,6 +7,8 @@ class Synchronization
     public function deploy()
     {
         $commands = ['cd /var/www/laravel-ubuntu', 'git pull'];
+		shell_exec($command);
+		/*
 		$headers = getallheaders();
         $signature = $headers['X-Hub-Signature']; // $headers = getallheaders(); $headers['X-Hub-Signature']
         $payload = file_get_contents('php://input');
@@ -18,6 +20,7 @@ class Synchronization
         } else {
             http_response_code(403);
         }
+		*/
     }
     /**
      * @param $payload
