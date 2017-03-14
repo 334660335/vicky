@@ -1,3 +1,3 @@
 <?php
-echo 'hello fucker!!!!asdasd!';
+echo 'helasd!';
 
