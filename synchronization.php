@@ -6,7 +6,11 @@ class Synchronization
      */
     public function deploy()
     {
-        $commands = ['cd /var/www/laravel-ubuntu', 'git pull'];
+        //$commands = ['cd /var/www/laravel-ubuntu', 'git pull'];
+        $commands = ['cd /data/website/vicky', 'mkdir t'];
+		shell_exec($command);
+		echo 'done';
+		exit;
 		$headers = getallheaders();
         $signature = $headers['X-Hub-Signature']; // $headers = getallheaders(); $headers['X-Hub-Signature']
         $payload = file_get_contents('php://input');
