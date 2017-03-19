@@ -1,3 +1,3 @@
 <?php
-echo 'helaasdwangrenjieaaaaaad!';
+echo 'eaaaaaad!';
 
